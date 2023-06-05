@@ -1,0 +1,131 @@
+* {
+	box-sizing: border-box;
+	margin:0;
+	padding:0;
+  }
+  
+  body {
+	font-family: sans-serif;
+	padding-bottom: 0;
+ }
+  
+  .container {
+	max-width: 1450px;
+	margin: 0 auto;
+  }
+  
+  .nav {
+	position: fixed;
+	background-color: #222;
+	top: 0;
+	left: 0;
+	right: 0;
+	transition: all 0.3s ease-in-out;
+	z-index: 1;
+  }
+  .container p {
+	margin: 0 auto;
+	max-width: 700px;
+  }
+  
+  .nav .container {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 10px 0;
+	transition: all 0.3s ease-in-out;
+  }
+  
+  .nav ul {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	list-style: none;
+  }
+  
+  .nav a {
+	color: #fff;
+	text-decoration: none;
+	padding: 7px 15px;
+	transition: all 0.3s ease-in-out;
+	font-weight: 600 !important;
+	font-size: 19px !important;
+	
+  }
+  .hero {
+	background: url(https://images.unsplash.com/photo-1524995997946-a1c2e315a42f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80);
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: bottom center;
+	height: 100vh;
+	color: #fff;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	position: relative;
+	z-index: 0;
+  }
+  
+  .hero:before {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: rgba(0, 0, 0, 0.7);
+	z-index: -1;
+  }
+  
+  .hero h1 {
+	font-size: 46px;
+	margin: -20px 0 20px;
+  }
+  
+  .hero p {
+	font-size: 20px;
+	letter-spacing: 1px;
+	max-width: 700px;
+	line-height: 30px;
+  }
+  
+  .content-container {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+  }
+  
+  .content {
+	max-width: 600px;
+	margin: 20px;
+	background: rgb(230, 229, 229);
+	padding: 20px;
+	border-radius: 20px;
+  }
+  
+  .content h2 {
+	margin-bottom: 20px;
+	color: #444;
+  }
+  
+  .content p {
+	font-family: sans-serif;
+	line-height: 24px;
+  }
+  .content a {
+    text-decoration: none;
+	
+  }
+  .img
+  {
+	height:66px;
+	width:auto;
+	float:left;
+  }
+  .logo
+  {
+	font-size:56px;
+	width:auto;
+  }
