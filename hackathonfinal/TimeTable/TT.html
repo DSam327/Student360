@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Course Timetable</title>
+  <link rel="shortcut icon" href="https://static.vecteezy.com/system/resources/previews/005/988/959/non_2x/calendar-icon-free-vector.jpg" type="image/x-icon">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #e6f2ff;
+      margin: 0;
+      padding: 0;
+    }
+
+    h1 {
+      background-color: #333333;
+      color: #ffffff;
+      padding: 20px;
+      text-align: center;
+      font-size: 50px;
+      margin: 0;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: 20px auto;
+      padding: 20px;
+      background-color: #ffffff;
+      border-radius: 10px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+    form {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 20px;
+    }
+
+    label {
+      margin-right: 10px;
+    }
+
+    select {
+      margin-right: 20px;
+    }
+
+    button {
+      padding: 10px 20px;
+      background-color: #333333;
+      color: #ffffff;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    th, td {
+      padding: 10px;
+      text-align: center;
+      border: 1px solid #cccccc;
+    }
+
+    th {
+      background-color: #333333;
+      color: #ffffff;
+    }
+
+    td {
+      background-color: #f2f2f2;
+    }
+    
+  </style>
+</head>
+<body>
+  <h1>College Course Timetable</h1>
+  <br>
+  <br>
+  <br>
+  <br>
+  <div class="container" style="padding:50px ;"> 
+    <form id="addForm">
+      <label for="course">Course:</label>
+      <input type="text" id="course" required>
+      <pre> </pre>
+      <label for="day">Day:</label>
+      <select id="day" required>
+        <option value="">Select</option>
+        <option value="monday">Monday</option>
+        <option value="tuesday">Tuesday</option>
+        <option value="wednesday">Wednesday</option>
+        <option value="thursday">Thursday</option>
+        <option value="friday">Friday</option>
+      </select>
+      
+      <label for="time">Time Slot:</label>
+      <select id="time" required>
+        <option value="">Select</option>
+        <option value="1">8:00 AM - 9:00 AM</option>
+        <option value="2">9:00 AM - 10:00 AM</option>
+        <option value="3">10:00 AM - 11:00 AM</option>
+        <option value="4">11:00 AM - 12:00 PM</option>
+        <option value="5">12:00 PM - 1:00 PM</option>
+        <option value="6">1:00 PM - 2:00 PM</option>
+        <option value="7">2:00 PM - 3:00 PM</option>
+        <option value="8">3:00 PM - 4:00 PM</option>
+        <option value="9">4:00 PM - 5:00 PM</option>
+      </select>
+      
+      <button type="submit">Add Course</button>
+    </form>
+
+    <table id="timetable">
+      <thead>
+        <tr>
+          <th>Time</th>
+          <th>Monday</th>
+          <th>Tuesday</th>
+          <th>Wednesday</th>
+          <th>Thursday</th>
+          <th>Friday</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>8:00 AM - 9:00 AM</td>
+          <td id="slot-1"></td>
+          <td id="slot-10"></td>
+          <td id="slot-19"></td>
+          <td id="slot-28"></td>
+          <td id="slot-37"></td>
+        </tr>
+        <tr>
+          <td>9:00 AM - 10:00 AM</td>
+          <td id="slot-2"></td>
+          <td id="slot-11"></td>
+          <td id="slot-20"></td>
+          <td id="slot-29"></td>
+          <td id="slot-38"></td>
+        </tr>
+        <tr>
+          <td>10:00 AM - 11:00 AM</td>
+          <td id="slot-3"></td>
+          <td id="slot-12"></td>
+          <td id="slot-21"></td>
+          <td id="slot-30"></td>
+          <td id="slot-39"></td>
+        </tr>
+        <tr>
+          <td>11:00 AM - 12:00 PM</td>
+          <td id="slot-4"></td>
+          <td id="slot-13"></td>
+          <td id="slot-22"></td>
+          <td id="slot-31"></td>
+          <td id="slot-40"></td>
+        </tr>
+        <tr>
+          <td>12:00 PM - 1:00 PM</td>
+          <td id="slot-5"></td>
+          <td id="slot-14"></td>
+          <td id="slot-23"></td>
+          <td id="slot-32"></td>
+          <td id="slot-41"></td>
+        </tr>
+        <tr>
+          <td>1:00 PM - 2:00 PM</td>
+          <td id="slot-6"></td>
+          <td id="slot-15"></td>
+          <td id="slot-24"></td>
+          <td id="slot-33"></td>
+          <td id="slot-42"></td>
+        </tr>
+        <tr>
+          <td>2:00 PM - 3:00 PM</td>
+          <td id="slot-7"></td>
+          <td id="slot-16"></td>
+          <td id="slot-25"></td>
+          <td id="slot-34"></td>
+          <td id="slot-43"></td>
+        </tr>
+        <tr>
+          <td>3:00 PM - 4:00 PM</td>
+          <td id="slot-8"></td>
+          <td id="slot-17"></td>
+          <td id="slot-26"></td>
+          <td id="slot-35"></td>
+          <td id="slot-44"></td>
+        </tr>
+        <tr>
+          <td>4:00 PM - 5:00 PM</td>
+          <td id="slot-9"></td>
+          <td id="slot-18"></td>
+          <td id="slot-27"></td>
+          <td id="slot-36"></td>
+          <td id="slot-45"></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <script>
+    const form = document.getElementById('addForm');
+const timetable = document.getElementById('timetable');
+
+form.addEventListener('submit', function(event) {
+  event.preventDefault();
+  const course = document.getElementById('course').value;
+  const day = document.getElementById('day').value;
+  const time = document.getElementById('time').value;
+
+  const column = Array.from(timetable.getElementsByTagName('th')).findIndex(th => th.textContent.toLowerCase() === day);
+  const row = parseInt(time, 10);
+
+  if (column !== -1 && row >= 1 && row <= 9) {
+    const slot = timetable.rows[row].cells[column];
+    if (slot.innerHTML.trim() === '') {
+      slot.textContent = course;
+      slot.style.backgroundColor = "#bde3c7";
+    } else {
+      alert('The selected time slot is already assigned.');
+    }
+  } else {
+    alert('Invalid day or time slot selected.');
+  }
+
+  form.reset();
+});
+
+  </script>
+</body>
+</html>
+
+  

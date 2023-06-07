@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#5d6b9c" />
+    <title>Branch Predictor</title>
+    <!--FONT-->
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- FAVICON -->
+    <link
+      rel="shortcut icon"
+      href="./images/calculator-logo-124.png"
+      type="image/x-icon"
+    />
+    <!--STYLESHEET-->
+    <link rel="stylesheet" href="./css/style.css" />
+    <!--MANIFEST-->
+    <link rel="manifest" href="manifest.json" />
+    <link rel="apple-touch-icon" href="images/calculator-logo-124.png" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+  </head>
+  <body>
+    <noscript>JavaScript is required to use this page</noscript>
+
+    <main class="container">
+      <div class="bg"></div>
+      <div class="title">
+        <h1>Branch Predictor</h1>
+        <p>
+          Calculate your chances of getting a branch in Thapar University  from your score.
+          predicts the percentage of your chances to end up with a branch according to your scores provided
+        </p>
+        <!-- <button class="help">Need help?</button> -->
+      </div>
+
+      <div class="overall-output">
+        <div>
+          <div class="error" aria-label="hidden">
+            <p>Please fill all input field</p>
+          </div>
+
+          <section class="calc__main result_main">
+            <div class="row">
+              <div class="col-md-12">
+                <div class="table-wrap">
+                  <table class="table">
+                    <thead class="thead-dark">
+                      <tr  style="padding: 3px 8px;;">
+                        <th>Branch </th>
+                        <th>Round 1</th>
+                        <th>Round 2</th>
+                        <th>Round 3</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr class="alert lowrank1 highrank2" role="alert">
+                        <th scope="row">CSE</th>
+                        <td class="tr11">98%</td>
+                        <td class="tr12">100%</td>
+                        <td class="tr13">97%</td>
+                        <td>
+                          <a href="#" class="close" data-dismiss="alert" aria-label="Close">
+                            <span aria-hidden="true"><i class="fa fa-close"></i></span>
+                          </a>
+                        </td>
+                      </tr>
+                      <tr class="alert lowrank1 highrank3"" role="alert">
+                        <th scope="row">COE</th>
+                        <td class="tr21">100%</td>
+                        <td class="tr22">100%</td>
+                        <td class="tr23">100%</td>
+                        <td>
+                          <a href="#" class="close" data-dismiss="alert" aria-label="Close">
+                            <span aria-hidden="true"><i class="fa fa-close"></i></span>
+                          </a>
+                        </td>
+                      </tr>
+                      <tr class="alert highrank1" role="alert">
+                        <th scope="row">ENC</th>
+                        <td class="tr31">100%</td>
+                        <td class="tr32">100%</td>
+                        <td class="tr33">100%</td>
+                        <td>
+                          <a href="#" class="close" data-dismiss="alert" aria-label="Close">
+                            <span aria-hidden="true"><i class="fa fa-close"></i></span>
+                          </a>
+                        </td>
+                      </tr>
+                      <tr class="alert highrank1" role="alert">
+                        <th scope="row">ECE</th>
+                        <td class="tr41">100%</td>
+                        <td class="tr42">100%</td>
+                        <td class="tr43">100%</td>
+                        <td>
+                          <a href="#" class="close" data-dismiss="alert" aria-label="Close">
+                            <span aria-hidden="true"><i class="fa fa-close"></i></span>
+                          </a>
+                        </td>
+                      </tr>
+                      <tr class="alert highrank1 lastrank1" role="alert">
+                        <th scope="row">EEC</th>
+                        <td class="tr51">100%</td>
+                        <td class="tr52">100%</td>
+                        <td class="tr53">100%</td>
+                        <td>
+                          <a href="#" class="close" data-dismiss="alert" aria-label="Close">
+                            <span aria-hidden="true"><i class="fa fa-close"></i></span>
+                          </a>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+          </section>
+
+          <section class="calc__display">
+            <div>
+              <h3>PCM</h3>
+              <p class="pcmentered">0</p>
+            </div>
+            <div>
+              <h3>Rank</h3>
+              <p class="rankentered">0</p>
+            </div>
+          </section>
+
+          <section class="resultContinue result__continue">
+            <h4>Would you like to calculate for another level?</h4>
+            <div>
+              <button class="yesBtn">Yes</button>
+              <button class="noBtn">No - Predict Score</button>
+            </div>
+          </section>
+
+          <section
+            class="displayResult display__result modalResult-bg"
+          ></section>
+
+          <div class="modal-bg">
+            <div class="modal myform1">
+              <h2>Please fill the form</h2>
+              <p id="formError"></p>
+              <form action="/" method="GET">
+                <div>
+                  <label for="name">PCM :</label>
+                  <input
+                    type="text"
+                    name="name"
+                    id="name"
+                    placeholder="PCM Percentage"
+                    required
+                    autocomplete="name"
+                  />
+                </div>
+                <div>
+                  <label for="years">JEE RANK:</label>
+                  <input
+                    type="number"
+                    name="years"
+                    id="years"
+                    placeholder="4"
+                    required
+                  />
+                </div>
+                <button type="button" class="submitBtn">Submit</button>
+              </form>
+            </div>
+          </div>
+
+          <div id="modal">
+            <div class="guide-modal">
+              <button aria-label="close modal" class="cancelBtn">
+                &times;
+              </button>
+              <div class="modal__content">
+                <h2>How to use <span>CGPA Result Predictor</span></h2>
+                <ul>
+                  <li>
+                    <b>&star;</b> Add the number of columns you want (i.e. the
+                    number of courses you want to calculate for) by clicking on
+                    the <kbd>Enter</kbd> key or the <span>Add</span> button.
+                  </li>
+                  <li>
+                    <b>&star;</b> Enter the course code for your respective
+                    courses.
+                  </li>
+                  <li>
+                    <b>&star;</b> Select the corresponding credit units and
+                    grades score.
+                  </li>
+                  <li>
+                    <b>&star;</b> Click on <span>Calculate</span> to calculate
+                    your GPA and CGPA. You should now see your GPA and CGPA
+                    displayed below.
+                  </li>
+                  <li>
+                    <b>&star;</b>
+                    If you wish to undo the current calculation, click on the
+                    <span>Undo</span> button.
+                  </li>
+                  <li>
+                    <b>&star;</b> After calculation, a pop up will appear.
+                  </li>
+                  <li>
+                    <b>&star;</b> If you want to calculate your GPA/CGPA for
+                    another semester, simply click on <span>Yes</span>, else
+                    click on <span>No - Predictor Score</span> to display your
+                    average score to end up with a 1st, 2nd upper/lower class.
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    
+      </div>
+    </div>    
+    <script src="main.js"></script>
+  </body>
+</html>
